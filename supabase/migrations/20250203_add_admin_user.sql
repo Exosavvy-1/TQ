@@ -1,4 +1,5 @@
-select auth.sign_up(
+insert into auth.users (email, encrypted_password)
+values (
   'tqpicture@gmail.com',
-  'TyraMokhotla@2705'
+  crypt('TyraMokhotla@2705', gen_salt('bf'))
 );
